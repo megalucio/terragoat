@@ -6,7 +6,7 @@ resource "google_compute_network" "vpc" {
 
 resource "google_compute_subnetwork" "public-subnetwork" {
   name          = "terragoat-${var.environment}-public-subnetwork"
-  ip_cidr_range = "10.0.0.0/24"
+  ip_cidr_range = "10.0.0.0/8"
   region        = var.region
   network       = google_compute_network.vpc.id
 
