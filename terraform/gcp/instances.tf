@@ -21,6 +21,7 @@ resource "google_compute_instance" "server" {
     enable-oslogin         = false
     serial-port-enable     = true
   }
+  
   labels = {
     git_commit           = "2bdc0871a5f4505be58244029cc6485d45d7bb8e"
     git_file             = "terraform__gcp__instances_tf"
