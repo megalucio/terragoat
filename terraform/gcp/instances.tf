@@ -33,7 +33,6 @@ resource "google_compute_instance" "server" {
     yor_trace            = "cd562b76-fbce-4e60-8c75-c9f43d7ffc16"
   }
 }
-
 resource "google_compute_disk" "unencrypted_disk" {
   name = "terragoat-${var.environment}-disk"
   labels = {
