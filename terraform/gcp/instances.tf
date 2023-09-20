@@ -21,6 +21,7 @@ resource "google_compute_instance" "server" {
     enable-oslogin         = false
     serial-port-enable     = true
   }
+  
   labels = {
     git_commit           = "2bdc0871a5f4505be58244029cc6485d45d7bb8e"
     git_file             = "terraform__gcp__instances_tf"
@@ -32,7 +33,6 @@ resource "google_compute_instance" "server" {
     yor_trace            = "cd562b76-fbce-4e60-8c75-c9f43d7ffc16"
   }
 }
-
 resource "google_compute_disk" "unencrypted_disk" {
   name = "terragoat-${var.environment}-disk"
   labels = {
